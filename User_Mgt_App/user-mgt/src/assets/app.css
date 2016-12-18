@@ -1,3 +1,19 @@
+.users-list {
+    padding: 10px 10px 0 10px;
+    display: table-cell;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.users-list tr {
+    border-bottom: 1px solid darkgray;
+    cursor: pointer;
+}
+
+.users-list td {
+    padding-bottom: 5px;
+}
+
 .main-container .list {
     display: inline-block;
     max-width: 270px;
