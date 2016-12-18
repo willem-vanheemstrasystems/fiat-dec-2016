@@ -1,0 +1,10 @@
+.main-container .list {
+    display: inline-block;
+    max-width: 270px;
+    vertical-align: top;
+    margin-right: 50px;
+}
+
+.l-sample-app {
+    text-align: center;
+}
