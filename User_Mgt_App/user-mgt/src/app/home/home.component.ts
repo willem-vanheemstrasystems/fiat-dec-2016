@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from '../shared/model/user';
 import { UsersService } from '../shared/model/users.service';
 
 @Component({
@@ -9,10 +10,12 @@ import { UsersService } from '../shared/model/users.service';
 })
 export class HomeComponent implements OnInit {
 
+  users: User[];  
+    
   constructor(private usersService: UsersService) { 
-  
-  }
-
+    this.users = this.usersService.getUsers();
+  }    
+      
   ngOnInit() {
   }
 
