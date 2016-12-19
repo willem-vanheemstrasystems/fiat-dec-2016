@@ -4,9 +4,9 @@
 
   <table class="table users-list card card-strong">
     <tbody>
-    <tr>
-      <td class="user-firstname"> TODO </td>
-      <td class="user-lastname"> TODO </td>
+    <tr *ngFor="let user of users">
+      <td class="user-firstname"> {{user.firstname}} </td>
+      <td class="user-lastname"> {{user.lastname}} </td>
     </tr>
     </tbody>  
   </table>
