@@ -1,9 +1,13 @@
 export class User {
 
   constructor(
-    public $key:string,
-    public firstname:string,
-    public lastname:string) {
+    public id:number,
+    public first_name:string,
+    public last_name:string,
+    public email:string,
+    public gender:string,
+    public address:string,
+    public job_role:string) {
     
   }
 }
