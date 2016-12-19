@@ -3,12 +3,12 @@ import { User } from '../shared/model/user';
 import { UsersService } from '../shared/model/users.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css'],
+  selector: 'app-user-list',
+  templateUrl: './user-list.component.html',
+  styleUrls: ['./user-list.component.css'],
   providers: [UsersService]
 })
-export class HomeComponent implements OnInit {
+export class UserListComponent implements OnInit {
 
   users: User[];  
     
