@@ -6,6 +6,9 @@ import { HttpModule } from '@angular/http';
 import { UsersService } from './shared/model/users.service';
 
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
+
+import { UserRoutingModule } from './user/user-routing.module';
 import { UserListComponent } from './user-list/user-list.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
 
@@ -18,7 +21,9 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    AppRoutingModule,
+    UserRoutingModule
   ],
   providers: [UsersService],
   bootstrap: [AppComponent]
