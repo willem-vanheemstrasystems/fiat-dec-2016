@@ -22,7 +22,6 @@ export class UserListComponent implements OnInit {
         private router: Router,
         private route: ActivatedRoute,
         private usersService: UsersService) {
-        //this.users = this.usersService.getUsers();
     }
 
     ngOnInit() {
