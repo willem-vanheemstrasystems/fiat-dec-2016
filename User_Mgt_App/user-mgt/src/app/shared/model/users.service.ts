@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-var users = [
+let USERS = [
   {
     "id": 1,
     "first_name": "Laura",
@@ -451,7 +451,9 @@ var users = [
     "address": "23697 Ryan Road",
     "job_role": "Recruiter"
   }
-]
+];
+
+let usersPromise = Promise.resolve(USERS);
 
 @Injectable()
 export class UsersService {
@@ -459,11 +461,15 @@ export class UsersService {
   private users; 
 
   constructor() {
-    this.users = users;
+    this.users = USERS; //WAS this.users = users;
   }
 
   getUsers() {
     return this.users;
   }
 
+  getUser(id: number | string) {
+    return usersPromise
+      .then(users => users.find(user => user.id === +id));
+  }  
 }
