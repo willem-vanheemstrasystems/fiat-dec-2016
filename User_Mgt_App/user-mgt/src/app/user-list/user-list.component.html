@@ -1,16 +1,24 @@
-<h2>User Management</h2>
+<nav>
+  <div class="container">
+    <h1><a href="index.html">User Management</a></h1>
+  </div>
+</nav>
+<section class="section-leader">
+  <div class="users-list-container v-h-center-block-parent">
 
-<div class="users-list-container v-h-center-block-parent">
+    <table class="table users-list card card-strong">
+      <thead>
+      <tr><th>First Name</th><th>Last Name</th></tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let user of users | async"
+        [class.selected]="isSelected(user)"
+        (click)="onSelect(user)">
+        <td class="user-firstname"> {{user.first_name}} </td>
+        <td class="user-lastname"> {{user.last_name}} </td>
+      </tr>
+      </tbody>  
+    </table>
 
-  <table class="table users-list card card-strong">
-    <tbody>
-    <tr *ngFor="let user of users | async"
-      [class.selected]="isSelected(user)"
-      (click)="onSelect(user)">
-      <td class="user-firstname"> {{user.first_name}} </td>
-      <td class="user-lastname"> {{user.last_name}} </td>
-    </tr>
-    </tbody>  
-  </table>
-
-</div>
+  </div>
+</section>

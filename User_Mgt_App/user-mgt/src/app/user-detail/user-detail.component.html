@@ -1,12 +1,17 @@
-<h2>User Management</h2>
+<nav>
+  <div class="container">
+    <h1><a href="index.html">User Management</a></h1>
+  </div>
+</nav>
+<section class="section-leader">
 
 <div class="users-list-container v-h-center-block-parent">
 
-  <table class="table users-list card card-strong">
+  <table class="table users-detail card card-strong">
+    <thead>
+    <th colspan="2" (click)="gotoUsers()">< Back</th>
+    </thead>
     <tbody *ngIf="user">
-    <tr>
-      <td class="back" colspan="2" (click)="gotoUsers()"> < back </td>
-    </tr>
     <tr>
       <td class="firstname"> First name: </td>
       <td class="user-firstname"> {{user.first_name}} </td>
@@ -35,3 +40,4 @@
   </table>
 
 </div>
+</section>
