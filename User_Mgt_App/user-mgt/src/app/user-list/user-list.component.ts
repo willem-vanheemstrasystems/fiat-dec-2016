@@ -14,7 +14,7 @@ import { UsersService } from '../shared/model/users.service';
 
 export class UserListComponent implements OnInit {
 
-    users: User;
+    users: Observable<User[]>;
 
     constructor(
         private router: Router,
