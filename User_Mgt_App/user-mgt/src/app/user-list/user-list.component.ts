@@ -16,14 +16,21 @@ export class UserListComponent implements OnInit {
 
     users: Observable<User[]>;
 
+    private selectedId: number;
+
     constructor(
         private router: Router,
         private route: ActivatedRoute,
         private usersService: UsersService) {
-        this.users = this.usersService.getUsers();
+        //this.users = this.usersService.getUsers();
     }
 
     ngOnInit() {
+        this.users = this.route.params
+            .switchMap((params: Params) => {
+                this.selectedId = +params['id'];
+                return this.usersService.getUsers();
+            });
     }
 
     onSelect(user: User) {
