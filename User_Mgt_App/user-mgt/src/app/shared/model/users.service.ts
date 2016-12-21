@@ -458,14 +458,11 @@ let usersPromise = Promise.resolve(USERS);
 @Injectable()
 export class UsersService {
 
-  private users; 
-
   constructor() {
-    this.users = USERS; //WAS this.users = users;
   }
 
   getUsers() {
-    return this.users;
+    return usersPromise;
   }
 
   getUser(id: number | string) {
