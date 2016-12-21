@@ -1,3 +1,37 @@
-<p>
-  user-detail works!
-</p>
+<h2>User Management</h2>
+
+<div class="users-list-container v-h-center-block-parent">
+
+  <table class="table users-list card card-strong">
+    <tbody *ngIf="user">
+    <tr>
+      <td class="back" colspan="2"> < back </td>
+    </tr>    
+    <tr>
+      <td class="firstname"> First name: </td>
+      <td class="user-firstname"> {{user.first_name}} </td>
+    </tr>
+    <tr>
+      <td class="lastname"> Last name: </td>
+      <td class="user-lastname"> {{user.last_name}} </td>
+    </tr> 
+    <tr>
+      <td class="email"> Email: </td>
+      <td class="user-email"> {{user.email}} </td>
+    </tr> 
+    <tr>
+      <td class="gender"> Gender: </td>
+      <td class="user-gender"> {{user.gender}} </td>
+    </tr> 
+    <tr>
+      <td class="address"> Address: </td>
+      <td class="user-address"> {{user.address}} </td>
+    </tr>  
+    <tr>
+      <td class="jobrole"> Job role: </td>
+      <td class="user-jobrole"> {{user.job_role}} </td>
+    </tr>               
+    </tbody>  
+  </table>
+
+</div>
