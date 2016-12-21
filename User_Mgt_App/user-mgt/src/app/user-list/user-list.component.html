@@ -5,6 +5,7 @@
   <table class="table users-list card card-strong">
     <tbody>
     <tr *ngFor="let user of users | async"
+      [class.selected]="isSelected(user)"
       (click)="onSelect(user)">
       <td class="user-firstname"> {{user.first_name}} </td>
       <td class="user-lastname"> {{user.last_name}} </td>
