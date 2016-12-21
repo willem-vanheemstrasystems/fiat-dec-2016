@@ -32,6 +32,10 @@ export class UserListComponent implements OnInit {
             });
     }
 
+    isSelected(user: User) {
+        return user.id === this.selectedId;
+    }
+
     onSelect(user: User) {
         this.router.navigate(['/user', user.id]);
     }
