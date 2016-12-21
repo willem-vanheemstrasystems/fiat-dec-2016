@@ -5,8 +5,8 @@
   <table class="table users-list card card-strong">
     <tbody *ngIf="user">
     <tr>
-      <td class="back" colspan="2"> < back </td>
-    </tr>    
+      <td class="back" colspan="2" (click)="gotoUsers()"> < back </td>
+    </tr>
     <tr>
       <td class="firstname"> First name: </td>
       <td class="user-firstname"> {{user.first_name}} </td>
