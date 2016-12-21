@@ -13,7 +13,7 @@ import { User } from '../shared/model/user';
 export class UserDetailComponent implements OnInit {
 
     user: User;
-    
+
     constructor(
         private route: ActivatedRoute,
         private router: Router,
@@ -25,6 +25,11 @@ export class UserDetailComponent implements OnInit {
             // (+) converts string 'id' to a number
             .switchMap((params: Params) => this.service.getUser(+params['id']))
             .subscribe((user: User) => this.user = user);
+    }
+
+    gotoUsers() {
+        let userId = this.user ? this.user.id : null;
+        this.router.navigate(['/users', { id: userId }]);
     }
 
 }
